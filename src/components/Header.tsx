@@ -3,7 +3,14 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <header>
+      <header
+        style={{
+          display: "flex",
+          alignItems: "center",
+          JustifyContent: "space-between",
+          backgroundColor: "red",
+        }}
+      >
         <svg
           viewBox="0 0 200 32"
           fill="none"
