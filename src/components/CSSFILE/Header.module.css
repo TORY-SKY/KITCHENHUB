@@ -1,9 +1,42 @@
-Header{
+
+
+.HeaderSec{
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
     background-color: #00a3ea;
-    max-width: 100%;
     font-family: 'Source Sans Pro', 'Helvetica Neue';
+    padding: 0 22px;
+    top:0;
+    z-index: 3;
+
                                                 
+}
+ .siteNav ul{
+    display: flex;
+    align-items: center;
+
+}
+.siteNav ul li{
+    text-decoration: none;
+    list-style: none;
+    
+}
+/* .siteNav ul li{
+    margin-left: 30px;
+} */
+.siteNav ul li:hover{
+    background-color: rgba(0, 0, 0, 0.244);
+}
+.siteNav ul li a{
+    color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1.5em 1.2em;
+  text-decoration: none;
+  vertical-align: top;
+  text-transform: uppercase;
+  font-size: 1.4em;
 }

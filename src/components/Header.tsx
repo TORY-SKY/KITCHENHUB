@@ -5,12 +5,11 @@ import logo from "";
 const Header = () => {
   return (
     <>
-      <header className={styles.header} role="banner">
+      <header className={styles.HeaderSec} role="banner">
         <h3 className="site-logo">
-          <div className="logo">
+          <a href="" className="logo">
             <img src="images/logo1.png" alt="" />
-          </div>
-          <a href="/">AdmissionsDay</a>
+          </a>
         </h3>
 
         <div className="mobile-nav">
@@ -18,7 +17,7 @@ const Header = () => {
             <span></span>
           </a>
         </div>
-        <nav className="site-nav" role="navigation">
+        <nav className={styles.siteNav} role="navigation">
           <ul>
             <li className="navigation-link">
               <a href="/how-it-works">How it works</a>
