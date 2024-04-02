@@ -1,0 +1,9 @@
+Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00a3ea;
+    max-width: 100%;
+    font-family: 'Source Sans Pro', 'Helvetica Neue';
+                                                
+}
