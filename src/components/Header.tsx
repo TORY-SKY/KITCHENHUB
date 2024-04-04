@@ -37,6 +37,23 @@ const Header = () => {
           </ul>
         </nav>
       </header>
+      <main>
+        <h1 className={styles.heroText}>
+          Take the guesswork out of school applications with our school finder
+          and distance calculator
+        </h1>
+        <p>Search for schools</p>
+        <div>
+          <form action="">
+            <button>by location</button>
+            <button>by name </button>
+            <div className="searBox">
+              <input type="text" placeholder="e.g.RG24 7BW; Croydon; Leeds" />
+              <button>SEARCH</button>
+            </div>
+          </form>
+        </div>
+      </main>
     </>
   );
 };
