@@ -37,7 +37,7 @@ const Header = () => {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className={styles.Headline}>
         <h1 className={styles.heroText}>
           Take the guesswork out of school applications with our school finder
           and distance calculator
@@ -54,6 +54,14 @@ const Header = () => {
           </form>
         </div>
       </main>
+      <section>
+        <div>
+          <p>
+            Check how far you are from your local schools with our{" "}
+            <a href="">distance calculator</a>.
+          </p>
+        </div>
+      </section>
     </>
   );
 };
