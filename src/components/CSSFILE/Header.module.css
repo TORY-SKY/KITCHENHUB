@@ -62,5 +62,36 @@
   margin: 0 auto .667em;
   max-width: 900px;
   text-align: center;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
+}
+
+.Headline h2{
+    font-size: 2em;
+    font-weight: 600;
+  color: rgb(255, 255, 255);
+
+}
+.Buttons{
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    outline: 1px solid red;
+    padding: .4em 0;
+}
+.Buttons li{
+    list-style-type: none;
+    outline: 1px solid yellow;
+    width: 50%;
+    font-size: 1.8rem;
+}
+.Buttons li.seletec{
+    background: #055679;
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+}
+.Buttons li a{
+    text-decoration: none;
+
 }

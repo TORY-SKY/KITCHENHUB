@@ -42,16 +42,25 @@ const Header = () => {
           Take the guesswork out of school applications with our school finder
           and distance calculator
         </h1>
-        <p>Search for schools</p>
+        <h2>Search for schools</h2>
         <div>
-          <form action="">
-            <button>by location</button>
-            <button>by name </button>
+          <div>
+            <ul className={styles.Buttons}>
+              <li>
+                <a href="">by location</a>
+              </li>
+              <li>
+                
+                <a href="" data-type="location">
+                  by name
+                </a>
+              </li>
+            </ul>
             <div className="searBox">
               <input type="text" placeholder="e.g.RG24 7BW; Croydon; Leeds" />
               <button>SEARCH</button>
             </div>
-          </form>
+          </div>
         </div>
       </main>
       <section>
