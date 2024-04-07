@@ -7,7 +7,6 @@ const Header: React.FC = () => {
     key: string;
     text: string;
   }
-  const { state, setState } = useState<HTMLUListElement | null>(null);
   return (
     <>
       <header className={styles.HeaderSec} role="banner">
