@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./CSSFILE/Header.module.css";
 import logo from "";
 
-const Header = () => {
+const Header: React.FC = () => {
+  interface LisItems {
+    key: string;
+    text: string;
+  }
+  const { state, setState } = useState<HTMLUListElement | null>(null);
   return (
     <>
       <header className={styles.HeaderSec} role="banner">
@@ -50,7 +55,6 @@ const Header = () => {
                 <a href="">by location</a>
               </li>
               <li>
-                
                 <a href="" data-type="location">
                   by name
                 </a>
