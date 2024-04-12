@@ -89,11 +89,12 @@ body{
 .Buttons li{
     list-style-type: none;
     width: 50%;
-    background-color: #055679;
+    height: 100%;
+    background-color: red;
+    
     
 }
 .Buttons li.seletec{
-    background: #055679;
     font-weight: bold;
     color: #fff;
     cursor: default;
