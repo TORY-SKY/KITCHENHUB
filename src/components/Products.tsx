@@ -9,12 +9,12 @@ import img7 from "../assets/images/img7.jpg";
 import img8 from "../assets/images/img8.jpg";
 const Products = [
   { id: 1, name: "Vsatep Don", price: 200, image: img1 },
-  { id: 2, name: "Don Toliver", price: 200, image: img2 },
-  { id: 3, name: "Lui V", price: 200, image: img3 },
-  { id: 4, name: "Brwn Weston", price: 200, image: img4 },
-  { id: 5, name: "Just Us", price: 200, image: img5 },
-  { id: 6, name: "Off White", price: 200, image: img6 },
+  { id: 2, name: "Don Toliver", price: 500, image: img2 },
+  { id: 3, name: "Lui V", price: 20, image: img3 },
+  { id: 4, name: "Brwn Weston", price: 100, image: img4 },
+  { id: 5, name: "Just Us", price: 260, image: img5 },
+  { id: 6, name: "Off White", price: 50, image: img6 },
   { id: 7, name: "5 Hay Em", price: 200, image: img7 },
-  { id: 8, name: "Seek Him", price: 200, image: img8 },
+  { id: 8, name: "Seek Him", price: 1000, image: img8 },
 ];
 export default Products;
