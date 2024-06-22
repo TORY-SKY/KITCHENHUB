@@ -1,6 +1,7 @@
 import React from "react";
 import Products from "./Products";
 import ProductCart from "./ProductCart";
+import AddtoCartbtn from "./AddtoCartbtn";
 const ProductCard = (properties) => {
   const { id, image, name, price } = properties.data;
   // const newProduct = Products.map((pp) => pp.image);
@@ -17,7 +18,7 @@ const ProductCard = (properties) => {
       <div className="price-add-to-cart">
         <p> ${price}</p>
         <p> {name}</p>
-        <button>Add to Cart</button>
+        <AddtoCartbtn />
       </div>
     </div>
   );
