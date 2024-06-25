@@ -1,13 +1,27 @@
-import { useState, useEffect } from "react";
-import ProductCard from "./components/ProductCard";
-import Products from "./components/Products";
-import ProductCart from "./components/ProductCart";
-import ProductList from "./components/ProductList";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProductList from "./components/ProductList";
+import Products from "./components/Products";
 
 function App() {
-  return <></>;
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      errorElement: "Error page, go back bro",
+      children: [
+        {
+          path: "product/:productId",
+          element: <ProductList />,
+        },
+      ],
+    },
+  ]);
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

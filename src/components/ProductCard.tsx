@@ -2,8 +2,10 @@ import React from "react";
 import Products from "./Products";
 import ProductCart from "./ProductCart";
 import AddtoCartbtn from "./AddtoCartbtn";
+import { Link, useParams } from "react-router-dom";
 const ProductCard = (properties) => {
   const { id, image, name, price } = properties.data;
+  const { ID } = useParams;
   // const newProduct = Products.map((pp) => pp.image);
   // const { id, title, price, description, images } = properties.data;
   // const iimage = images?.[0]?.slice(1, 1);
@@ -12,7 +14,9 @@ const ProductCard = (properties) => {
   return (
     <div className="product-card">
       <div className="image-container">
-        <img src={image} alt="image" />
+        <Link to="product/:productId">
+          <img src={image} alt="image" />
+        </Link>
       </div>
 
       <div className="price-add-to-cart">

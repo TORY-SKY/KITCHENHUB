@@ -22,23 +22,16 @@ const Home = () => {
   return (
     <div>
       <div className="card-container">
-        {products.length > 0 ? (
-          Products.map((product) => (
-            <Link key={product.id} to={<ProductCart />}>
-              <ProductCard key={product.id} data={product} />
-            </Link>
-          ))
-        ) : (
-          <p>Loading products...</p>
-        )}
+        {Products.map((product) => (
+          <ProductCard key={product.id} data={product} />
+        ))}
       </div>
       {/* <div className="card-container">
             {Products.map((product) => (
               <ProductCard key={product.id} data={product} />
             ))}
           </div> */}
-      <ProductCart />
-      <ProductList />
+      {/* <ProductList /> */}
     </div>
   );
 };
