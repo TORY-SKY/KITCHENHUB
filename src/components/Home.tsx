@@ -19,6 +19,7 @@ const Home = () => {
 
     fetchData();
   }, []);
+
   return (
     <div>
       <div className="card-container">
