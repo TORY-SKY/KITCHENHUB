@@ -13,6 +13,10 @@ const ProductCard = (properties) => {
 
   return (
     <div className="product-card">
+      <div className="love-add-btns">
+        <div className="love">Love</div>
+        <AddtoCartbtn />
+      </div>
       <div className="image-container">
         <Link to="product/:productId">
           <img src={image} alt="image" />
@@ -22,7 +26,6 @@ const ProductCard = (properties) => {
       <div className="price-add-to-cart">
         <p> ${price}</p>
         <p> {name}</p>
-        <AddtoCartbtn />
       </div>
     </div>
   );

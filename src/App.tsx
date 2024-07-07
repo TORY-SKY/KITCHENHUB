@@ -15,7 +15,7 @@ function App() {
       children: [
         {
           path: "product/:productId",
-          element: <ProductCart />,
+          element: <h1>HAY THE ROUTING WORKS</h1>,
           errorElement: "404 not found",
         },
       ],
