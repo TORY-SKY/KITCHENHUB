@@ -74,7 +74,9 @@ const Navigationbar = () => {
           </Link>
         </nav>
         <div className="sign-in-btn">
-          <Link to="/sign-in">Sign in/Register</Link>
+          <Link to="/sign-in" className="click-to-sign-up">
+            Sign in/Register
+          </Link>
         </div>
 
         <div className="handburger-menu">
