@@ -11,7 +11,6 @@ import img9 from "../assets/products/img9.jpg";
 import img10 from "../assets/products/img10.jpg";
 import img11 from "../assets/products/img11.jpg";
 const Products = [
-  { id: 0, name: "hero-image", image: img1 },
   { id: 1, name: "Pressure Cooker", price: 135.0, image: img2 },
   { id: 2, name: "Juice Maker", price: 145.0, image: img3 },
   { id: 3, name: "Blender", price: 135.0, image: img4 },

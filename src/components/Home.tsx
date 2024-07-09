@@ -1,30 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import Products from "./Products";
-import ProductCart from "./ProductCart";
-import ProductList from "./ProductList";
-import { Link } from "react-router-dom";
+import card1 from "../assets/products/payment_icon1.png";
+import card2 from "../assets/products/payment_icon2.png";
+import card3 from "../assets/products/payment_icon3.png";
 import Navigationbar from "./Navbar/Navigationbar";
-import MyCarousel from "./Slider";
-import Slider from "./Slider";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("https://api.escuelajs.co/api/v1/products");
-      const data = await response.json();
-      setProducts(data);
-      console.log(data);
-    };
-
-    fetchData();
-  }, []);
+  const handleScrollUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <div>
+    <div className="homepage-containe-div">
       <Navigationbar />
       <div className="Hero-section">
         <div className="hero-text">
@@ -173,6 +165,7 @@ const Home = () => {
           <p className="free-delivery-1">service support lasts 24/7</p>
         </div>
       </section>
+
       {/* new arrival section */}
       <div className="productPage">
         <div className="cols">
@@ -182,18 +175,84 @@ const Home = () => {
             Experience!
           </p>
         </div>
-        {/* <div className="card-container">
-          {Products.map((product) => (
-            <ProductCard key={product.id} data={product} />
-          ))}
+
+        <div className="cols">
+          <h3 className="free-delivery-1">Featured Product</h3>
+          <p className="free-delivery-1">"Top Picks of the Month"</p>
         </div>
         <div className="card-container">
           {Products.map((product) => (
             <ProductCard key={product.id} data={product} />
           ))}
-        </div> */}
+        </div>
+        <div className="cols">
+          <h3 className="free-delivery-1">Featured Product</h3>
+          <p className="free-delivery-1">"Top Picks of the Month"</p>
+        </div>
+        {/* scroll up icon */}
+        <button className="scoll-up-btn" onClick={handleScrollUp}>
+          <svg
+            width="14"
+            height="18"
+            viewBox="0 0 14 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 17V1M7 1L13 7M7 1L1 7"
+              stroke="#333333"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </div>
-      <ProductCard />
+      <section className="Newsletter-container">
+        <div className="news-lre">
+          <h1 className="to-our-news-letter">Subscribe To Our Newsletter</h1>
+          <p className="subscribe-to-news-letter">
+            Subscribe to our newsletter and save 10% off your next purchase
+          </p>
+        </div>
+        <div className="enter-email-subscribe">
+          <input type="email" placeholder="Enter your email" />
+          <button type="button" className="btn ">
+            SUBSCRIBE
+          </button>
+        </div>
+      </section>
+      <footer className="footer-section">
+        <div className="rows">
+          <h1 className="logo-text">KitchenHub</h1>
+          <p>@Copyright 2024</p>
+          <div className="transaction-card">
+            <img src={card1} alt="payment-card" />
+            <img src={card2} alt="payment-card" />
+            <img src={card3} alt="payment-card" />
+          </div>
+        </div>
+        <div className="rows">
+          <h1>Company</h1>
+          <p>About Us</p>
+          <p>Contact Us</p>
+          <p>Privacy Policy</p>
+          <p>Terms and Conditions</p>
+        </div>
+        <div className="rows">
+          <h1>Useful Links</h1>
+          <p>Sign In</p>
+          <p>Register</p>
+          <p>FAQs</p>
+        </div>
+        <div className="rows">
+          <h1>Connect with us?</h1>
+          <p>123NY Cresent, New York City.</p>
+          <p>555 - 5555-5555</p>
+          <p>Info@KitchenHub.Uk</p>
+          <div className="socials"></div>
+        </div>
+      </footer>
     </div>
   );
 };
