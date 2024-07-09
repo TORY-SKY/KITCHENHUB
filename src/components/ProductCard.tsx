@@ -6,7 +6,7 @@ const ProductCard = (product) => {
   const { id, image, name, price } = product.data;
 
   return (
-    <div className="product-card">
+    <div className="product-card" key={id}>
       <div className="cardm">
         <span className="like-container">
           <svg
