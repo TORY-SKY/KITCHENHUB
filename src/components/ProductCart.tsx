@@ -1,5 +1,4 @@
 import React from "react";
-import ProductCard from "./ProductCard";
 const ProductCart = () => {
   // const { id, category, image, price } = props.data;
   // console.log(id);

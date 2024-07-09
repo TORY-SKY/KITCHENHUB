@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProductCard from "./ProductCard";
 import Products from "./Products";
 import card1 from "../assets/products/payment_icon1.png";

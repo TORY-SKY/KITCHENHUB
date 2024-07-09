@@ -100,10 +100,10 @@ const Navigationbar = () => {
           </Link>
           <Link to="/home" className="home-nav-link">
             Shop
-          </Link>{" "}
+          </Link>
           <Link to="/home" className="home-nav-link">
             About
-          </Link>{" "}
+          </Link>
           <Link to="/home" className="home-nav-link">
             Contact
           </Link>
