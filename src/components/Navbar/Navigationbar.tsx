@@ -95,16 +95,16 @@ const Navigationbar = () => {
           </form>
         </div>
         <nav className="nav-links">
-          <Link to="/home" className="home-nav-link">
+          <Link to="/" className="home-nav-link">
             Home
           </Link>
-          <Link to="/home" className="home-nav-link">
+          <Link to="/" className="home-nav-link">
             Shop
           </Link>
-          <Link to="/home" className="home-nav-link">
+          <Link to="/" className="home-nav-link">
             About
           </Link>
-          <Link to="/home" className="home-nav-link">
+          <Link to="/" className="home-nav-link">
             Contact
           </Link>
         </nav>
