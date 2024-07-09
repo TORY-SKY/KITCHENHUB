@@ -172,7 +172,7 @@ const Home = () => {
             Experience!
           </p>
         </div>
-        <div className="card-container">
+        <div className="card-container the-carousel">
           {Products.map((product) => (
             <ProductCard key={product.id} data={product} />
           ))}
@@ -224,35 +224,37 @@ const Home = () => {
           </button>
         </div>
       </section>
-      <footer className="footer-section">
-        <div className="rows">
-          <h1 className="logo-text">KitchenHub</h1>
-          <p>@Copyright 2024</p>
-          <div className="transaction-card">
-            <img src={card1} alt="payment-card" />
-            <img src={card2} alt="payment-card" />
-            <img src={card3} alt="payment-card" />
+      <footer className="footer-container-div">
+        <div className="footer-section">
+          <div className="rows">
+            <h1 className="logo-text">KitchenHub</h1>
+            <p>@Copyright 2024</p>
+            <div className="transaction-card">
+              <img src={card1} alt="payment-card" />
+              <img src={card2} alt="payment-card" />
+              <img src={card3} alt="payment-card" />
+            </div>
           </div>
-        </div>
-        <div className="rows">
-          <h1>Company</h1>
-          <p>About Us</p>
-          <p>Contact Us</p>
-          <p>Privacy Policy</p>
-          <p>Terms and Conditions</p>
-        </div>
-        <div className="rows">
-          <h1>Useful Links</h1>
-          <p>Sign In</p>
-          <p>Register</p>
-          <p>FAQs</p>
-        </div>
-        <div className="rows">
-          <h1>Connect with us?</h1>
-          <p>123NY Cresent, New York City.</p>
-          <p>555 - 5555-5555</p>
-          <p>Info@KitchenHub.Uk</p>
-          <div className="socials"></div>
+          <div className="rows">
+            <h1>Company</h1>
+            <p>About Us</p>
+            <p>Contact Us</p>
+            <p>Privacy Policy</p>
+            <p>Terms and Conditions</p>
+          </div>
+          <div className="rows">
+            <h1>Useful Links</h1>
+            <p>Sign In</p>
+            <p>Register</p>
+            <p>FAQs</p>
+          </div>
+          <div className="rows">
+            <h1>Connect with us?</h1>
+            <p>123NY Cresent, New York City.</p>
+            <p>555 - 5555-5555</p>
+            <p>Info@KitchenHub.Uk</p>
+            <div className="socials"></div>
+          </div>
         </div>
       </footer>
     </div>

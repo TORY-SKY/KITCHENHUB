@@ -22,7 +22,6 @@ body{
 }
 
 
-
 /* new */
 
 .navbar-1{
@@ -414,6 +413,31 @@ body{
     background-color: var(--Icon-color);
     border-radius: 22px;
 }
+.footer-container-div{
+    background-color: black;
+
+}
+.footer-section{
+    display: grid;
+    color: var(--white-color);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+   
+}
+.transaction-card{
+    display: flex;
+    /* flex-direction: column; */
+    width: 200px;
+    object-fit: contain;
+    
+}
+.transaction-card img{
+    width: 50px;
+    margin-right: 12px;
+}
 /* TABLET RESPONSIVENESS STYLING */
 @media (min-width: 415px) and (max-width: 768px){
     .navbar-2 .nav-links .home-nav-link{
@@ -481,6 +505,30 @@ body{
     }
     .hero-text .discount-notfication-text{
         font-size: 1.2rem;
+    }
+
+
+
+    .footer-container-div{
+        background-color: black;
+    
+    }
+    .footer-section{
+        display: grid;
+        grid-template-columns: 1fr ;
+        padding-bottom: 70px;
+        
+       
+    }
+    .transaction-card{
+        display: flex;
+        width: 200px;
+        object-fit: contain;
+        
+    }
+    .transaction-card img{
+        width: 50px;
+        margin-right: 12px;
     }
 }
     
@@ -573,5 +621,32 @@ body{
         height: 40px;
     }
 
+
+
+    .footer-container-div{
+        background-color: black;
+    
+    }
+    .footer-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: var(--white-color);
+        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-left: 70px;
+        margin-right: 70px;
+        text-align: left;
+       
+    }
+    .transaction-card{
+        display: flex;
+        width: 200px;
+        object-fit: contain;
+        
+    }
+    .transaction-card img{
+        width: 50px;
+        margin-right: 12px;
+    }
     
 }

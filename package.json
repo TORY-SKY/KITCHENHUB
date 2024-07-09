@@ -1,7 +1,7 @@
 {
   "name": "my-website",
   "private": true,
-  "homepage": "/",
+  "homepage": "https://github.com/TORY-SKY/tkitchenhubstore.git",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

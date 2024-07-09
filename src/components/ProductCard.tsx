@@ -6,6 +6,7 @@ interface Product {
   image: string;
   name: string;
   price: number;
+  data: string;
 }
 const ProductCard: React.FC<Product> = (product) => {
   const { id, image, name, price } = product.data;
