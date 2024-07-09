@@ -1,13 +1,13 @@
 {
-  "name": "kitchenhub",
+  "name": "tkitchenhub",
   "private": true,
-  "homepage": "https://tory-sky.github.io/tkitchenhubstore",
+  "homepage": "https://tory-sky/github.io/tkitchenhubstore",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
