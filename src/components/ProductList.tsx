@@ -1,7 +1,3 @@
-import React from "react";
-import AddtoCartbtn from "./AddtoCartbtn";
-import { useParams } from "react-router-dom";
-
 const ProductList = () => {
   return (
     <div className="Product-display-container">

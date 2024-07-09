@@ -1,5 +1,3 @@
-import React from "react";
-import { useState } from "react";
 import ProductCard from "./ProductCard";
 import Products from "./Products";
 import card1 from "../assets/products/payment_icon1.png";
@@ -8,7 +6,7 @@ import card3 from "../assets/products/payment_icon3.png";
 import Navigationbar from "./Navbar/Navigationbar";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
   const handleScrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

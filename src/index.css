@@ -367,7 +367,7 @@ body{
 }
 .news-lre{
     margin: 12px auto;
-    width: 300px;
+    /* width: 300px; */
 }
 .to-our-news-letter{
     font-size: 2.2rem;
@@ -401,7 +401,7 @@ body{
 .Newsletter-container .enter-email-subscribe button{
     cursor: pointer;
     outline: 12px solid green;
-    width: 140px;
+    width: 95px;
     height: 100%;
     padding: 20px;
     display: flex;
@@ -474,6 +474,7 @@ body{
         width: 400px;
         margin: 12px auto;
     }
+   
     .news-lre{
         margin: 12px auto;
         width: 100%;

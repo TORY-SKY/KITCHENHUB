@@ -1,5 +1,3 @@
-import React from "react";
-import img1 from "../assets/products/hero.jpg";
 import img2 from "../assets/products/img2.jpg";
 import img3 from "../assets/products/img3.jpg";
 import img4 from "../assets/products/img4.jpg";
@@ -9,11 +7,16 @@ import img7 from "../assets/products/img7.jpg";
 import img8 from "../assets/products/img8.jpg";
 import img9 from "../assets/products/img9.jpg";
 import img10 from "../assets/products/img10.jpg";
-import img11 from "../assets/products/img11.jpg";
 import img12 from "../assets/products/img12.jpg";
 import img13 from "../assets/products/img13.jpg";
 import img14 from "../assets/products/img14.jpg";
-const Products = [
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+};
+const Products: Product[] = [
   { id: 1, name: "Pressure Cooker", price: 135.0, image: img2 },
   { id: 2, name: "Juice Maker", price: 145.0, image: img3 },
   { id: 3, name: "Blender", price: 135.0, image: img4 },
@@ -25,5 +28,6 @@ const Products = [
   { id: 9, name: "Food Warmer", price: 135.0, image: img10 },
   { id: 10, name: "Pressure Cooker", price: 135.0, image: img12 },
   { id: 11, name: "Microwave", price: 135.0, image: img13 },
+  { id: 14, name: "Microwave", price: 135.0, image: img14 },
 ];
 export default Products;

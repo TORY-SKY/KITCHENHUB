@@ -1,4 +1,3 @@
-import React from "react";
 const ProductCart = () => {
   // const { id, category, image, price } = props.data;
   // console.log(id);
