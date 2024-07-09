@@ -5,7 +5,7 @@ import card2 from "../assets/products/payment_icon2.png";
 import card3 from "../assets/products/payment_icon3.png";
 import Navigationbar from "./Navbar/Navigationbar";
 
-const Home = () => {
+const Home: React.FC = () => {
   // const [products, setProducts] = useState([]);
 
   const handleScrollUp = () => {

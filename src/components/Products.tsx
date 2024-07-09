@@ -10,13 +10,8 @@ import img10 from "../assets/products/img10.jpg";
 import img12 from "../assets/products/img12.jpg";
 import img13 from "../assets/products/img13.jpg";
 import img14 from "../assets/products/img14.jpg";
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-};
-const Products: Product[] = [
+
+const Products = [
   { id: 1, name: "Pressure Cooker", price: 135.0, image: img2 },
   { id: 2, name: "Juice Maker", price: 145.0, image: img3 },
   { id: 3, name: "Blender", price: 135.0, image: img4 },

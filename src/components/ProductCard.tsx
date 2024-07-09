@@ -1,14 +1,8 @@
 import AddtoCartbtn from "./AddtoCartbtn";
 import { Link } from "react-router-dom";
+import ProductInterface from "./ProductInterface";
 
-interface Product {
-  id: number;
-  image: string;
-  name: string;
-  price: number;
-  data: string;
-}
-const ProductCard: React.FC<Product> = (product) => {
+const ProductCard: React.FC<ProductInterface> = (product) => {
   const { id, image, name, price } = product.data;
   return (
     <div className="product-card" key={id}>
