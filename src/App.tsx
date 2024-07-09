@@ -11,14 +11,6 @@ function App() {
       path: "/",
       element: <Home />,
       errorElement: "Error page, go back bro",
-
-      children: [
-        {
-          path: "/product",
-          element: <h1>HAY THE ROUTING WORKS</h1>,
-          errorElement: "404 not found",
-        },
-      ],
     },
   ]);
   return (

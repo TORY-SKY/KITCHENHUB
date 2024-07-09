@@ -10,6 +10,9 @@ import img8 from "../assets/products/img8.jpg";
 import img9 from "../assets/products/img9.jpg";
 import img10 from "../assets/products/img10.jpg";
 import img11 from "../assets/products/img11.jpg";
+import img12 from "../assets/products/img12.jpg";
+import img13 from "../assets/products/img13.jpg";
+import img14 from "../assets/products/img14.jpg";
 const Products = [
   { id: 1, name: "Pressure Cooker", price: 135.0, image: img2 },
   { id: 2, name: "Juice Maker", price: 145.0, image: img3 },
@@ -20,6 +23,7 @@ const Products = [
   { id: 7, name: "Whisk", price: 200.0, image: img8 },
   { id: 8, name: "Cutlery", price: 135.0, image: img9 },
   { id: 9, name: "Food Warmer", price: 135.0, image: img10 },
-  { id: 10, name: "Pressure Cooker", price: 135.0, image: img11 },
+  { id: 10, name: "Pressure Cooker", price: 135.0, image: img12 },
+  { id: 11, name: "Microwave", price: 135.0, image: img13 },
 ];
 export default Products;

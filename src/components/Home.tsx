@@ -175,6 +175,11 @@ const Home = () => {
             Experience!
           </p>
         </div>
+        <div className="card-container">
+          {Products.map((product) => (
+            <ProductCard key={product.id} data={product} />
+          ))}
+        </div>
 
         <div className="cols">
           <h3 className="free-delivery-1">Featured Product</h3>
