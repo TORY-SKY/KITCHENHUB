@@ -28,7 +28,7 @@ const Navigationbar = () => {
         </form>
         {/*  */}
         <div className="seach-user"></div>
-        <Link to={":/productCart"}>
+        <Link to={"/cartPage"}>
           <div className="cartIcon">
             <div className="search-user">
               <svg
