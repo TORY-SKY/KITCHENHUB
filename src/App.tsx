@@ -7,7 +7,7 @@ function App() {
     {
       path: "/",
       element: <Home />,
-      errorElement: "Error page, go back bro",
+      errorElement: "Error page,You are lost",
     },
     {
       path: "/cartpage",

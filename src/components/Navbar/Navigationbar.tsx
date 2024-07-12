@@ -5,7 +5,9 @@ const Navigationbar = () => {
     <div>
       {/* Navigation bar */}
       <div className="navbar-1">
-        <h1 className="logo-text">KitchenHub</h1>
+        <Link to={"/"} className="kitchenhub-home-page">
+          <h1 className="logo-text">KitchenHub</h1>
+        </Link>
         <form action="" className="search-iput-container">
           <input type="text" placeholder="Search" className="search-product" />
           <span>
