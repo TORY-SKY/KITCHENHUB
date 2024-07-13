@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import ProductCart from "./components/ProductCart";
+import ContextProvider from "./components/ContextAPI/ContextProvider.tsx";
 
 function App() {
   const router = createBrowserRouter([
