@@ -17,7 +17,9 @@ function App() {
   ]);
   return (
     <>
-      <RouterProvider router={router} />
+      <ContextProvider>
+        <RouterProvider router={router} />
+      </ContextProvider>
     </>
   );
 }

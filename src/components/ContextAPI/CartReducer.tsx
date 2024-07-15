@@ -1,4 +1,5 @@
-const CartReducer = (state, action) => {
+import { CartState } from "../ProductInterface";
+const CartReducer = (state: CartState, action: any) => {
   switch (action.type) {
     case "Add":
     case "Remove":

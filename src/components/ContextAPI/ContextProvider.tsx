@@ -1,17 +1,24 @@
 import { createContext, useReducer } from "react";
-import ProductInterface from "../ProductInterface";
+import { CartState, CartDispatch, initialState } from "../ProductInterface";
+import Products from "../Products";
 import CartReducer from "./CartReducer";
 
-export const CartContext = createContext<ProductInterface>(
-  {} as ProductInterface
-);
+// Define the cart state type explicitly
+
+// Define the dispatch action type
+
+export const CartContext = createContext<CartState>(initialState);
 
 const ContextProvider = ({ children }) => {
-  const [cart, dispatch] = useReducer(CartReducer, []);
+  const [cart, dispatch] = useReducer<CartReducer, CartState>(
+    CartReducer,
+    initialState
+  );
+
   return (
-    <ContextProvider.Provider
-      value={{ cart, dispatch }}
-    ></ContextProvider.Provider>
+    <CartContext.Provider value={{ cart, dispatch }}>
+      {children}
+    </CartContext.Provider>
   );
 };
 
