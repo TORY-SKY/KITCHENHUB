@@ -4,12 +4,13 @@ import card1 from "../assets/products/payment_icon1.png";
 import card2 from "../assets/products/payment_icon2.png";
 import card3 from "../assets/products/payment_icon3.png";
 import Navigationbar from "./Navbar/Navigationbar";
+import { useState } from "react";
 
 const Home: React.FC = () => {
   // const [products, setProducts] = useState([]);
+  const [productState, setproductState] = useState(Products);
 
   const handleScrollUp = () => {
-    // scroll backup function
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -175,7 +176,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="card-container the-carousel">
-          {Products.map((product) => (
+          {productState.map((product) => (
             <ProductCard key={product.id} data={product} />
           ))}
         </div>

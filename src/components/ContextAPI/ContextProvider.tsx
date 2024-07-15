@@ -11,7 +11,7 @@ import CartReducer from "./CartReducer";
 export const CartContext = createContext<CartState>(initialState);
 
 const ContextProvider = ({ children }) => {
-  const [cart, dispatch] = useReducer<CartReducer, CartState>(
+  const [cart, dispatch] = useReducer<CartReducer, CartStat>(
     CartReducer,
     initialState
   );

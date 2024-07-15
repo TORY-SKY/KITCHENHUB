@@ -24,7 +24,7 @@ const ProductCard: React.FC<ProductInterface> = (product) => {
         </span>
         <div className="product-image-div">
           <Link to={"/cartpage"}>
-            <img src={image} alt="product" />
+            <img src={image} alt="product-image" />
           </Link>
         </div>
         <AddtoCartbtn />

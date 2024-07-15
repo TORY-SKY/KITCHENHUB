@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ContextProvider from "../ContextAPI/ContextProvider";
 
 const Navigationbar = () => {
-  const { cart } = useContext(ContextProvider);
   return (
     <div>
       {/* Navigation bar */}

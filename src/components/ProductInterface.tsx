@@ -12,8 +12,8 @@ export const initialState: CartState = {
   dispatch: "string",
 };
 export interface CartState {
-  cart: Products[];
-  dispatch?: "string";
+  cart: [];
+  dispatch?: any;
 }
 
 export type CartDispatch = (action: any) => void; // Placeholder for specific action types
