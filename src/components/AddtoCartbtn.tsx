@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "./ContextAPI/ContextProvider";
 import Products from "./Products";
-import ProductCard from "./ProductCard";
+
 
 const AddtoCartbtn = () => {
   const { dispatch } = useContext(CartContext);
@@ -9,9 +9,7 @@ const AddtoCartbtn = () => {
     <div>
       <div className="add-to-cart-btn">
         <button
-          onClick={() => {
-            dispatch({ type: "Add", product: ProductCard.length });
-          }}
+          onClick={{dispatch(type: "Add", product: product)}}
         >
           <span>Add to Cart</span>
           <svg
