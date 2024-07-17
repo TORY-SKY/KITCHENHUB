@@ -1,10 +1,6 @@
-import { useContext, useState } from "react";
-import { CartContext } from "./ContextAPI/ContextProvider";
-import Products from "./Products";
+import { useProducts } from "./ContextAPI/ContextProvider";
 
-const AddtoCartbtn = () => {
-  const { cart } = useContext(CartContext);
-
+const AddtoCartbtn = (Onclick) => {
   return (
     <div>
       <div className="add-to-cart-btn">

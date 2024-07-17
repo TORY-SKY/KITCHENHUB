@@ -1,26 +1,111 @@
-import { createContext, useReducer } from "react";
-import { CartState, CartDispatch, initialState } from "../ProductInterface";
+import React, { createContext, useContext, useReducer, ReactNode } from "react";
 
-import Products from "../Products";
-import CartReducer from "./CartReducer";
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+}
 
-// Define the cart state type explicitly
+interface CartItem extends Product {
+  quantity: number;
+}
 
-// Define the dispatch action type
+interface State {
+  products: Product[];
+  cart: CartItem[];
+}
 
-export const CartContext = createContext<CartState>(initialState);
+interface Action {
+  type:
+    | "ADD_TO_CART"
+    | "REMOVE_FROM_CART"
+    | "INCREASE_QUANTITY"
+    | "DECREASE_QUANTITY";
+  payload: Product;
+}
 
-const ContextProvider = ({ children }) => {
-  const [cart, dispatch] = useReducer<CartReducer, CartState>(
-    CartReducer,
-    initialState
-  );
+const initialState: State = {
+  products: [],
+  cart: [],
+};
+
+const ProductsContext = createContext<{
+  state: State;
+  dispatch: React.Dispatch<Action>;
+}>({
+  state: initialState,
+  dispatch: () => undefined,
+});
+
+const reducer = (state: State, action: Action): State => {
+  switch (action.type) {
+    case "ADD_TO_CART": {
+      const existingItem = state.cart.find(
+        (item) => item.id === action.payload.id
+      );
+      if (existingItem) {
+        return {
+          ...state,
+          cart: state.cart.map((item) =>
+            item.id === action.payload.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          ),
+        };
+      }
+      return {
+        ...state,
+        cart: [...state.cart, { ...action.payload, quantity: 1 }],
+      };
+    }
+    case "REMOVE_FROM_CART": {
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
+      };
+    }
+    case "INCREASE_QUANTITY": {
+      return {
+        ...state,
+        cart: state.cart.map((item) =>
+          item.id === action.payload.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        ),
+      };
+    }
+    case "DECREASE_QUANTITY": {
+      return {
+        ...state,
+        cart: state.cart
+          .map((item) =>
+            item.id === action.payload.id
+              ? { ...item, quantity: item.quantity - 1 }
+              : item
+          )
+          .filter((item) => item.quantity > 0),
+      };
+    }
+    default:
+      return state;
+  }
+};
+
+export const ProductsProvider = ({
+  children,
+  products,
+}: {
+  children: ReactNode;
+  products: Product[];
+}) => {
+  const [state, dispatch] = useReducer(reducer, { ...initialState, products });
 
   return (
-    <CartContext.Provider value={{ cart, dispatch }}>
+    <ProductsContext.Provider value={{ state, dispatch }}>
       {children}
-    </CartContext.Provider>
+    </ProductsContext.Provider>
   );
 };
 
-export default ContextProvider;
+export const useProducts = () => useContext(ProductsContext);

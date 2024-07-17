@@ -4,6 +4,7 @@ import ProductInterface from "./ProductInterface";
 
 const ProductCard: React.FC<ProductInterface> = (product) => {
   const { id, image, name, price } = product.data;
+
   return (
     <div className="product-card" key={id}>
       <div className="cardm">
@@ -28,6 +29,7 @@ const ProductCard: React.FC<ProductInterface> = (product) => {
           </Link>
         </div>
         <AddtoCartbtn />
+
         <div className="price-prod-name">
           <p className="product-name">{name}</p>
           <p className="product-price">${price}.00</p>

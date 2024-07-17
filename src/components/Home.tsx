@@ -17,6 +17,7 @@ const Home: React.FC = () => {
   return (
     <div className="homepage-containe-div">
       <Navigationbar />
+
       <div className="Hero-section">
         <div className="hero-text">
           <p className="discount-notfication-text">SALES UP TO 30% OFF</p>
