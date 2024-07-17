@@ -1,6 +1,6 @@
 import { useProducts } from "./ContextAPI/ContextProvider";
 
-const AddtoCartbtn = (Onclick) => {
+const AddtoCartbtn = () => {
   return (
     <div>
       <div className="add-to-cart-btn">
