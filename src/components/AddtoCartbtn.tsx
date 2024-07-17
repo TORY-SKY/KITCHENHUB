@@ -1,16 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "./ContextAPI/ContextProvider";
 import Products from "./Products";
 
-
 const AddtoCartbtn = () => {
-  const { dispatch } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
+
   return (
     <div>
       <div className="add-to-cart-btn">
-        <button
-          onClick={{dispatch(type: "Add", product: product)}}
-        >
+        <button>
           <span>Add to Cart</span>
           <svg
             width="24"

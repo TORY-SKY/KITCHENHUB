@@ -1,8 +1,11 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import ProductCart from "./components/ProductCart";
+import Products from "./components/Products";
 
 function App() {
+  const foundItem = Products.find((prod) => prod.id === Products);
+  alert(foundItem);
   const router = createBrowserRouter([
     {
       path: "/",
