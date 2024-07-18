@@ -5,13 +5,18 @@ import card2 from "../assets/products/payment_icon2.png";
 import card3 from "../assets/products/payment_icon3.png";
 import Navigationbar from "./Navbar/Navigationbar";
 import { useState } from "react";
-
+import { useProducts } from "./ContextAPI/ContextProvider";
+import { ProductCardProps } from "./ProductInterface";
 const Home: React.FC = () => {
   // const [products, setProducts] = useState([]);
   const [productState, setproductState] = useState(Products);
 
   const handleScrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const { dispatch } = useProducts;
+  const addToCart = (product: ProductCardProps) => {
+    dispatch({ type: "ADD_TO_CART", payload: product });
   };
 
   return (
@@ -178,7 +183,11 @@ const Home: React.FC = () => {
 
         <div className="card-container the-carousel">
           {productState.map((product) => (
-            <ProductCard key={product.id} data={product} />
+            <ProductCard
+              key={product.id}
+              data={product}
+              addtoCart={addToCart}
+            />
           ))}
         </div>
 

@@ -1,3 +1,4 @@
+import { Product } from "./ContextAPI/ContextProvider";
 interface ProductInterface {
   data: { id: number; name: string; price: number; image: string };
   key: number;
@@ -5,10 +6,16 @@ interface ProductInterface {
   dispatch?: any;
   value?: {};
 }
+export interface ProductCardProps {
+  product: Product;
+  addToCart: (product: Product) => void;
+}
+
 export const initialState: CartState = {
   cart: [],
   dispatch: "string",
 };
+
 export interface CartState {
   cart: [];
   dispatch?: any;

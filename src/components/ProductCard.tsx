@@ -1,9 +1,12 @@
 import AddtoCartbtn from "./AddtoCartbtn";
 import { Link } from "react-router-dom";
 import ProductInterface from "./ProductInterface";
+import Products from "./Products";
 
-const ProductCard: React.FC<ProductInterface> = (product) => {
-  const { id, image, name, price } = product.data;
+import { ProductCardProps } from "./ProductInterface";
+
+const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
+  const { id, image, name, price } = product;
 
   return (
     <div className="product-card" key={id}>
@@ -28,7 +31,7 @@ const ProductCard: React.FC<ProductInterface> = (product) => {
             <img src={image} alt="product-image" />
           </Link>
         </div>
-        <AddtoCartbtn />
+        <AddtoCartbtn onClick={() => addToCart(product)} />
 
         <div className="price-prod-name">
           <p className="product-name">{name}</p>

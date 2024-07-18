@@ -1,10 +1,15 @@
 import { useProducts } from "./ContextAPI/ContextProvider";
+import Products from "./Products";
 
-const AddtoCartbtn = () => {
+interface AddtoCartProperty {
+  onClick: () => void;
+}
+
+const AddtoCartbtn: React.FC<AddtoCartProperty> = ({ onClick }) => {
   return (
     <div>
       <div className="add-to-cart-btn">
-        <button>
+        <button onClick={onClick}>
           <span>Add to Cart</span>
           <svg
             width="24"
