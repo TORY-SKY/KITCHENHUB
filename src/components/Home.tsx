@@ -186,7 +186,7 @@ const Home: React.FC = () => {
             <ProductCard
               key={product.id}
               data={product}
-              addtoCart={addToCart}
+              addToCart={addToCart}
             />
           ))}
         </div>
@@ -197,7 +197,11 @@ const Home: React.FC = () => {
         </div>
         <div className="card-container">
           {Products.map((product) => (
-            <ProductCard key={product.id} data={product} />
+            <ProductCard
+              key={product.id}
+              data={product}
+              addToCart={addToCart}
+            />
           ))}
         </div>
         <div className="cols">

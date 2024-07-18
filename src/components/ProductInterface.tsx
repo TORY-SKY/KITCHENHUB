@@ -8,7 +8,8 @@ interface ProductInterface {
 }
 export interface ProductCardProps {
   product: Product;
-  addToCart: (product: Product) => void;
+  addToCart?: (product: Product) => void;
+  data?: Product;
 }
 
 export const initialState: CartState = {
