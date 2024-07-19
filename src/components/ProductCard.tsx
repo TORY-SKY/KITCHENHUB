@@ -1,18 +1,10 @@
 import AddtoCartbtn from "./AddtoCartbtn";
 import { Link } from "react-router-dom";
-import ProductInterface from "./ProductInterface";
-import Products from "./Products";
-import { Product } from "./ContextAPI/ContextProvider";
 
 import { ProductCardProps } from "./ProductInterface";
-import { useProducts } from "./ContextAPI/ContextProvider";
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
   const { id, image, name, price } = product;
-  const { dispatch } = useProducts;
-  const addTooCart = (product: Product) => {
-    dispatch({ type: "ADD_TO_CART", payload: product });
-  };
 
   return (
     <div className="product-card" key={id}>
@@ -37,7 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
             <img src={image} alt="product-image" />
           </Link>
         </div>
-        <AddtoCartbtn onClick={() => addTooCart(product)} />
+        <AddtoCartbtn onClick={() => addToCart(product)} />
 
         <div className="price-prod-name">
           <p className="product-name">{name}</p>
