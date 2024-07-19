@@ -32,7 +32,13 @@ const ProductCart = () => {
             <div className="total-price-container">
               <p className="total-text">Text</p>
               <h3>$270.00</h3>
-              <h1>No. of items in cart: {state.cart.length}</h1>
+              <div>
+                <div>
+                  {state.cart.map((item) => (
+                    <img src={item.image} alt="" />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

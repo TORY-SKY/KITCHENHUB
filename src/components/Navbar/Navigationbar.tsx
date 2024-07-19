@@ -1,7 +1,10 @@
 import { createContext, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useProducts } from "../ContextAPI/ContextProvider";
 
 const Navigationbar = () => {
+  const { state } = useProducts();
+
   return (
     <div>
       {/* Navigation bar */}
@@ -80,7 +83,7 @@ const Navigationbar = () => {
               />
             </svg>
 
-            <span className="cart-counter">{1}</span>
+            <span className="cart-counter">{state.cart.length}</span>
           </div>
         </Link>
       </div>

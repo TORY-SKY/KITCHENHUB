@@ -9,12 +9,11 @@ import { useProducts, Product } from "./ContextAPI/ContextProvider";
 
 const Home: React.FC = () => {
   // const [products, setProducts] = useState([]);
-  const { state, dispatch } = useProducts();
+  const { dispatch } = useProducts();
   const addToCart = (product: Product) => {
     dispatch({ type: "ADD_TO_CART", payload: product });
-    console.log(state.cart);
   };
-  const [productState, setproductState] = useState(Products);
+  const [productState] = useState(Products);
 
   const handleScrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
