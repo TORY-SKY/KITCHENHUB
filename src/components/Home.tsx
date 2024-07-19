@@ -6,14 +6,14 @@ import card3 from "../assets/products/payment_icon3.png";
 import Navigationbar from "./Navbar/Navigationbar";
 import { useState } from "react";
 import { useProducts, Product } from "./ContextAPI/ContextProvider";
-import { ProductCardProps } from "./ProductInterface";
 
-const { dispatch } = useProducts;
-const addToCart = (product: Product) => {
-  dispatch({ type: "ADD_TO_CART", payload: product });
-};
 const Home: React.FC = () => {
   // const [products, setProducts] = useState([]);
+  const { state, dispatch } = useProducts();
+  const addToCart = (product: Product) => {
+    dispatch({ type: "ADD_TO_CART", payload: product });
+    console.log(state.cart);
+  };
   const [productState, setproductState] = useState(Products);
 
   const handleScrollUp = () => {

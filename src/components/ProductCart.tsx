@@ -1,6 +1,9 @@
+import { useProducts } from "./ContextAPI/ContextProvider";
 import Navigationbar from "./Navbar/Navigationbar";
 
 const ProductCart = () => {
+  const { state } = useProducts();
+
   // const { id, category, image, price } = props.data;
   // // console.log(id);
   return (
@@ -29,6 +32,7 @@ const ProductCart = () => {
             <div className="total-price-container">
               <p className="total-text">Text</p>
               <h3>$270.00</h3>
+              <h1>No. of items in cart: {state.cart.length}</h1>
             </div>
           </div>
         </div>
