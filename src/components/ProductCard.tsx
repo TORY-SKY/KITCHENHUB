@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import { ProductCardProps } from "./ProductInterface";
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
-  const { id, image, name, price } = product;
+const ProductCard: React.FC<ProductCardProps> = ({ data, addToCart }) => {
+  const { id, image, name, price } = data;
 
   return (
     <div className="product-card" key={id}>
@@ -29,7 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
             <img src={image} alt="product-image" />
           </Link>
         </div>
-        <AddtoCartbtn onClick={() => addToCart(product)} />
+        <AddtoCartbtn onClick={() => addToCart(data)} />
 
         <div className="price-prod-name">
           <p className="product-name">{name}</p>

@@ -13,14 +13,12 @@ interface ProductInterface {
   value?: {};
 }
 export interface ProductCardProps {
-  product: Product;
   addToCart: (product: Product) => void;
   data: {
     id: number;
     name: string;
     price: number;
     image: string;
-    product: Product;
   };
 
   // data?: Product;
