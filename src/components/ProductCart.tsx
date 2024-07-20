@@ -4,6 +4,14 @@ import emptyCart from "../assets/products/empty-cart.png";
 
 const ProductCart = () => {
   const { state } = useProducts();
+  const summaryStyle = {
+    display: state.cart.length === 0 ? "none" : "block",
+  };
+  // const Prices = state.cart;
+  // console.log(Prices[1].price);
+  // const subTotalofproductnCart = state.cart.reduce(
+  //   (accumulator, currentValue) => accumulator + currentValue
+  // );
 
   // const { id, category, image, price } = props.data;
   // // console.log(id);
@@ -15,8 +23,8 @@ const ProductCart = () => {
           <div className="Cart-lenght">
             <h1>Cart ({state.cart.length})</h1>
           </div>
+
           <div className="cart-item">
-            <hr />
             <div className="item">
               {state.cart.length == 0 ? (
                 <div className="Empty-cart-text emty-cart-container">
@@ -42,10 +50,12 @@ const ProductCart = () => {
                       </div>
                     </div>
                     <div className="remove-item">
-                      <div className="remove">REMOVE</div>
+                      <div className="remove">
+                        <button>REMOVE</button>
+                      </div>
                       <div className="unit-quantity">
                         <button>-</button>
-                        <button>-</button>
+                        <h4>1</h4>
                         <button>+</button>
                       </div>
                     </div>
@@ -53,16 +63,18 @@ const ProductCart = () => {
                 ))
               )}
             </div>
-            <div className="item-summary">
-              <h3>CART SUMMARY</h3>
-              <hr />
-              <div className="subtotal">
-                <p>Subtotal</p>
-                <h3>&#8358;451,000</h3>
+            <div style={summaryStyle}>
+              <div className="item-summary">
+                <h3 className="item-s">CART SUMMARY</h3>
+                <hr className="item-s" />
+                <div className="item-s subtotal ">
+                  <p className="item-s">Subtotal</p>
+                  <h3 className="item-s">&#8358;451,000</h3>
+                </div>
+                <p className="item-s">Delivery fees not included yet.</p>
+                <hr />
+                <button className="item-s check-out-btn">CHECKOUT ({0})</button>
               </div>
-              <p>Delivery fees not included yet.</p>
-              <hr />
-              <button>CHECKOUT ({0})</button>
             </div>
           </div>
         </div>
