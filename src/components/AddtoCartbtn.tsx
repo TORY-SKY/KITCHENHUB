@@ -1,6 +1,3 @@
-import { useProducts } from "./ContextAPI/ContextProvider";
-import Products from "./Products";
-
 interface AddtoCartProperty {
   onClick: () => void;
 }
