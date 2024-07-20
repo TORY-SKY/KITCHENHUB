@@ -1,5 +1,6 @@
 const ProductList = () => {
   return (
+    // coming back to you dawg
     <div className="Product-display-container">
       <div className="product-display">
         <div className="img-container">

@@ -7,6 +7,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data, addToCart }) => {
   const { id, image, name, price } = data;
 
   return (
+    // coming for you dawg
     <div className="product-card" key={id}>
       <div className="cardm">
         <span className="like-container">

@@ -8,6 +8,7 @@ import Products from "./components/Products.tsx";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ProductsProvider products={Products}>
+      {/* working */}
       <App />
     </ProductsProvider>
   </React.StrictMode>

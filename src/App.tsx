@@ -14,7 +14,7 @@ function App() {
       path: "/cartpage",
       element: <ProductCart />,
       errorElement:
-        "Get your ass back, how tf did you even get here in the first place",
+        "Get your ass back, how tf did you even get here in the first place, hhuhh",
     },
   ]);
   return (

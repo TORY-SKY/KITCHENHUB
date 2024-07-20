@@ -1,6 +1,7 @@
 a{
     text-decoration: none;
 }
+/* out */
 .card-container{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
