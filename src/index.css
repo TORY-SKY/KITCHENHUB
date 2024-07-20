@@ -8,9 +8,11 @@
 }
 :root{
     --white-color: rgb(255, 255, 255);
+    --supl-color: #333333;
     --button-color: rgb(23, 96, 7);
     --brand-color: linear-gradient(to right, #009CAA 10%, #00CADD 100%);
     --Icon-color: #FF6B6B;
+    --bg-color: #F7F7F7;
 }
 body{
     font-family: "Source Sans Pro","Helvetica Neue",Arial,sans-serif;
@@ -27,8 +29,7 @@ body{
 /* new */
 
 .navbar-1{
-    position: fixed;
-    top: 0;
+
     z-index: 12;
     background-color: #D9D9D9;
     display: flex;
@@ -107,10 +108,8 @@ body{
 
 
 .navbar-2{
-    
     background: var(--brand-color);
     position: relative;
-    top: 80px;
     z-index: 11;
     background-color: #D9D9D9;
     display: flex;
@@ -442,6 +441,60 @@ body{
     width: 50px;
     margin-right: 12px;
 }
+
+/* Cart Summary */
+.Empty-cart-text{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cart-item-card */
+.CART{
+    background-color: var(--bg-color);
+}
+.cart-item-container{
+    margin: 10px 20px;
+}
+.cart-item-card{
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    width: 100%;
+    outline: 3px solid red;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    padding: 6px;
+
+}
+.cart-item-card .cart-img{
+    width: 100%;
+    display: flex;
+    margin-bottom: 6px;
+}
+.cart-item-card .cart-img img{
+    margin-right: 12px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 6px; */
+}
+.cart-item-card .item-here{
+    display: flex;
+    align-items: center;
+}
+/* remember to display this block or flex on bigger screen sizes */
+.item-detail{
+    display: none;
+}
+
+*{
+    /* outline: 1px solid red; */
+}
+
 /* TABLET RESPONSIVENESS STYLING */
 @media (min-width: 415px) and (max-width: 768px){
     .navbar-2 .nav-links .home-nav-link{

@@ -10,6 +10,7 @@ import img10 from "../assets/products/img10.jpg";
 import img12 from "../assets/products/img12.jpg";
 import img13 from "../assets/products/img13.jpg";
 import img14 from "../assets/products/img14.jpg";
+import img15 from "../assets/products/Elegant Kitchen Countertop with Apples.jpg";
 
 const Products = [
   { id: 1, name: "Pressure Cooker", price: 135.0, image: img2 },
@@ -24,5 +25,11 @@ const Products = [
   { id: 10, name: "Pressure Cooker", price: 135.0, image: img12 },
   { id: 11, name: "Microwave", price: 135.0, image: img13 },
   { id: 14, name: "Microwave", price: 135.0, image: img14 },
+  {
+    id: 15,
+    name: "Elegant Kitchen Countertop with Apples",
+    price: 500.0,
+    image: img15,
+  },
 ];
 export default Products;
