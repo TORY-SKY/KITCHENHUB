@@ -1,7 +1,7 @@
 {
   "name": "kitchenhub",
   "private": true,
-  "homepage": "https://tory-sky.github.io/KITCHENHUB/",
+  "homepage": ".",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
