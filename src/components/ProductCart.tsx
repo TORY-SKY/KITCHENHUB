@@ -1,4 +1,4 @@
-import { useProducts } from "./ContextAPI/ContextProvider";
+import { useProducts, Product } from "./ContextAPI/ContextProvider";
 import Navigationbar from "./Navbar/Navigationbar";
 import emptyCart from "../assets/products/empty-cart.png";
 
@@ -7,12 +7,18 @@ const ProductCart = () => {
   const summaryStyle = {
     display: state.cart.length === 0 ? "none" : "block",
   };
-  // const Prices = state.cart;
-  // console.log(Prices[1].price);
-  // const subTotalofproductnCart = state.cart.reduce(
-  //   (accumulator, currentValue) => accumulator + currentValue
-  // );
 
+  // function to sum up cart item price
+  const totalPrice = state.cart.reduce((accumulator, item) => {
+    return accumulator + item.price;
+  }, 0);
+
+  // remove from cart
+
+  const removeItem = (product: Product) => {
+    const { dispatch } = useProducts();
+    dispatch({ type: "REMOVE_FROM_CART", payload: product });
+  };
   // const { id, category, image, price } = props.data;
   // // console.log(id);
   return (
@@ -51,7 +57,7 @@ const ProductCart = () => {
                     </div>
                     <div className="remove-item">
                       <div className="remove">
-                        <button>REMOVE</button>
+                        <button onClick={() => removeItem(item)}>REMOVE</button>
                       </div>
                       <div className="unit-quantity">
                         <button>-</button>
@@ -63,17 +69,19 @@ const ProductCart = () => {
                 ))
               )}
             </div>
-            <div style={summaryStyle}>
+            <div style={summaryStyle} className="summ">
               <div className="item-summary">
                 <h3 className="item-s">CART SUMMARY</h3>
                 <hr className="item-s" />
                 <div className="item-s subtotal ">
                   <p className="item-s">Subtotal</p>
-                  <h3 className="item-s">&#8358;451,000</h3>
+                  <h3 className="item-s">${totalPrice}.00</h3>
                 </div>
                 <p className="item-s">Delivery fees not included yet.</p>
                 <hr />
-                <button className="item-s check-out-btn">CHECKOUT ({0})</button>
+                <button className="item-s check-out-btn">
+                  CHECKOUT (${totalPrice}.00)
+                </button>
               </div>
             </div>
           </div>

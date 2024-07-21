@@ -25,7 +25,7 @@ interface Action {
   payload: Product;
 }
 
-const initialState: State = {
+export const initialState: State = {
   products: [],
   cart: [],
 };

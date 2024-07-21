@@ -577,10 +577,17 @@ body{
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     color: var(--white-color);
     font-size: clamp(1rem, 3vw, 1.1rem);
+    cursor: pointer;
     
 }
+.unit-quantity button{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
 *{
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
+}
+.summ{
+    display: none;
 }
 
 /* TABLET RESPONSIVENESS STYLING */
