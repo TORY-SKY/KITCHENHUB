@@ -70,7 +70,11 @@ const reducer = (state: State, action: Action): State => {
         ...state,
         cart: state.cart.map((item) =>
           item.id === action.payload.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? {
+                ...item,
+                quantity:
+                  item.quantity >= 10 ? item.quantity : item.quantity + 1,
+              }
             : item
         ),
       };

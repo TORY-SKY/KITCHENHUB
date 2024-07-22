@@ -1,29 +1,40 @@
 import { useProducts, Product } from "./ContextAPI/ContextProvider";
 import Navigationbar from "./Navbar/Navigationbar";
 import emptyCart from "../assets/products/empty-cart.png";
+import { useState } from "react";
 
 const ProductCart = () => {
-  const { state } = useProducts();
+  const { state, dispatch } = useProducts();
+  const [searchTerm, setSearchTerm] = useState("");
+  // Search function
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
   const summaryStyle = {
     display: state.cart.length === 0 ? "none" : "block",
   };
 
-  // function to sum up cart item price
-  const totalPrice = state.cart.reduce((accumulator, item) => {
-    return accumulator + item.price;
-  }, 0);
+  // function to remove product from cart by clicking the 'REMOVE' button
 
-  // remove from cart
-
-  const removeItem = (product: Product) => {
-    const { dispatch } = useProducts();
+  const addToCart = (product: Product) => {
     dispatch({ type: "REMOVE_FROM_CART", payload: product });
   };
-  // const { id, category, image, price } = props.data;
-  // // console.log(id);
+  const IncreaseQuantity = (product: Product) => {
+    dispatch({ type: "INCREASE_QUANTITY", payload: product });
+  };
+  const DecreaseQuantity = (product: Product) => {
+    dispatch({ type: "DECREASE_QUANTITY", payload: product });
+  };
+
+  // function to sum up cart item price(using .reduce())
+  const totalPrice = state.cart.reduce((accumulator, item) => {
+    return accumulator + item.price * item.quantity;
+  }, 0);
+
   return (
     <div>
-      <Navigationbar />
+      <Navigationbar handleSearch={handleSearch} />
       <section className="CART">
         <div className="cart-item-container">
           <div className="Cart-lenght">
@@ -57,12 +68,16 @@ const ProductCart = () => {
                     </div>
                     <div className="remove-item">
                       <div className="remove">
-                        <button onClick={() => removeItem(item)}>REMOVE</button>
+                        <button onClick={() => addToCart(item)}>REMOVE</button>
                       </div>
                       <div className="unit-quantity">
-                        <button>-</button>
-                        <h4>1</h4>
-                        <button>+</button>
+                        <button onClick={() => DecreaseQuantity(item)}>
+                          -
+                        </button>
+                        <h4 className="item-quantity">{item.quantity}</h4>
+                        <button onClick={() => IncreaseQuantity(item)}>
+                          +
+                        </button>
                       </div>
                     </div>
                   </div>

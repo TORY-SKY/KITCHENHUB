@@ -24,6 +24,7 @@ body{
 }
 .kitchenhub-home-page{
     text-decoration: none;
+    display: none;
 }
 
 /* new */
@@ -49,11 +50,12 @@ body{
 }
 /* Search input */
 .search-iput-container{
-    display: none;
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
     background-color: white;
     border-radius: 15px;
-    width: 0;
+    width: 100%;
     height: 30px;
     padding: 12px 12px;
     transition: width 0.4s ease-in-out;
@@ -66,6 +68,7 @@ body{
     outline: none;
     border: none;
     background-color: transparent;
+    font-size: clamp(1rem, 3vw, 1.2rem);
 }
 .search-iput-container svg{
     cursor: pointer;
@@ -449,6 +452,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* Cart-item-card */
@@ -583,6 +587,18 @@ body{
 .unit-quantity button{
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
+.units{
+    font-size: 0.9rem;
+    color: #666666;
+}
+.item-quantity{
+    border: 1px solid #009CAA;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 8px;
+}
 *{
     /* outline: 1px solid red; */
 }
@@ -615,6 +631,9 @@ body{
         padding: 24px;
 
         
+    }
+    .kitchenhub-home-page{
+        display: flex;
     }
     .logo-text{
         /* display: flex; */
@@ -730,6 +749,9 @@ body{
         display: flex;
         width: 330px;
         height: 40px;
+    }
+    .kitchenhub-home-page{
+        display: flex;
     }
     .hero-text{
         padding: 20px 60px;

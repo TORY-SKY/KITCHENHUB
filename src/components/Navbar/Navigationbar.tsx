@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useProducts } from "../ContextAPI/ContextProvider";
+import { NavigationBarProps } from "../ProductInterface";
 
-const Navigationbar = () => {
+const Navigationbar: React.FC<NavigationBarProps> = ({ handleSearch }) => {
   const { state } = useProducts();
 
   return (
@@ -12,7 +13,12 @@ const Navigationbar = () => {
           <h1 className="logo-text">KitchenHub</h1>
         </Link>
         <form action="" className="search-iput-container">
-          <input type="text" placeholder="Search" className="search-product" />
+          <input
+            type="text"
+            onChange={handleSearch}
+            placeholder="Search"
+            className="search-product"
+          />
           <span>
             <svg
               width="18"
@@ -32,7 +38,7 @@ const Navigationbar = () => {
           </span>
         </form>
         {/*  */}
-        <div className="seach-user"></div>
+        {/* <div className="seach-user"></div> */}
         <Link to={"/cartPage"}>
           <div className="cartIcon">
             <div className="search-user">
@@ -49,20 +55,6 @@ const Navigationbar = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                />
-              </svg>
-              <svg
-                width="17"
-                height="18"
-                viewBox="0 0 17 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M10.9286 4.59692C10.9286 5.24102 10.6727 5.85874 10.2173 6.31418C9.76181 6.76963 9.1441 7.0255 8.5 7.0255C7.8559 7.0255 7.23819 6.76963 6.78274 6.31418C6.3273 5.85874 6.07143 5.24102 6.07143 4.59692C6.07143 3.95283 6.3273 3.33511 6.78274 2.87966C7.23819 2.42422 7.8559 2.16835 8.5 2.16835C9.1441 2.16835 9.76181 2.42422 10.2173 2.87966C10.6727 3.33511 10.9286 3.95283 10.9286 4.59692ZM12.75 4.59692C12.75 5.72409 12.3022 6.8051 11.5052 7.60213C10.7082 8.39916 9.62717 8.84692 8.5 8.84692C7.37283 8.84692 6.29183 8.39916 5.4948 7.60213C4.69777 6.8051 4.25 5.72409 4.25 4.59692C4.25 3.46975 4.69777 2.38875 5.4948 1.59172C6.29183 0.79469 7.37283 0.346924 8.5 0.346924C9.62717 0.346924 10.7082 0.79469 11.5052 1.59172C12.3022 2.38875 12.75 3.46975 12.75 4.59692ZM1.82143 14.3112C1.82143 14.0635 2.08857 13.3289 3.42429 12.5396C4.66043 11.8098 6.46 11.2755 8.5 11.2755C10.54 11.2755 12.3396 11.8098 13.5757 12.5396C14.9114 13.3289 15.1786 14.0635 15.1786 14.3112C15.1786 14.6333 15.0506 14.9421 14.8229 15.1698C14.5952 15.3976 14.2863 15.5255 13.9643 15.5255H3.03571C2.71367 15.5255 2.40481 15.3976 2.17708 15.1698C1.94936 14.9421 1.82143 14.6333 1.82143 14.3112ZM8.5 9.45407C3.825 9.45407 0 11.8826 0 14.3112C0 15.1163 0.319833 15.8885 0.88914 16.4578C1.45845 17.0271 2.23059 17.3469 3.03571 17.3469H13.9643C14.7694 17.3469 15.5416 17.0271 16.1109 16.4578C16.6802 15.8885 17 15.1163 17 14.3112C17 11.8826 13.175 9.45407 8.5 9.45407Z"
-                  fill="#F7F7F7"
                 />
               </svg>
             </div>

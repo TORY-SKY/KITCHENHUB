@@ -8,12 +8,20 @@ import { useState } from "react";
 import { useProducts, Product } from "./ContextAPI/ContextProvider";
 
 const Home: React.FC = () => {
-  // const [products, setProducts] = useState([]);
+  const [productState] = useState(Products);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+  const filteredProducts = productState.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+  );
+
   const { dispatch } = useProducts();
   const addToCart = (product: Product) => {
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
-  const [productState] = useState(Products);
 
   const handleScrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -21,7 +29,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="homepage-containe-div">
-      <Navigationbar />
+      <Navigationbar handleSearch={handleSearch} />
 
       <div className="Hero-section">
         <div className="hero-text">
@@ -182,7 +190,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="card-container the-carousel">
-          {productState.map((product) => (
+          {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
               data={product}
