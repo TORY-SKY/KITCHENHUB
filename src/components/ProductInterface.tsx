@@ -35,6 +35,7 @@ export interface CartState {
 }
 export interface NavigationBarProps {
   handleSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
 }
 export type CartDispatch = (action: any) => void; // Placeholder for specific action types
 

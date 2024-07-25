@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const ProductCart = () => {
   const { state, dispatch } = useProducts();
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string> ("");
   // Search function
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -34,7 +34,7 @@ const ProductCart = () => {
 
   return (
     <div>
-      <Navigationbar handleSearch={handleSearch} />
+      <Navigationbar value={searchTerm} handleSearch={handleSearch} />
       <section className="CART">
         <div className="cart-item-container">
           <div className="Cart-lenght">

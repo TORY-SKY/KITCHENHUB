@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { useProducts } from "../ContextAPI/ContextProvider";
 import { NavigationBarProps } from "../ProductInterface";
 
-const Navigationbar: React.FC<NavigationBarProps> = ({ handleSearch }) => {
+const Navigationbar: React.FC<NavigationBarProps> = ({
+  value,
+  handleSearch,
+}) => {
   const { state } = useProducts();
 
   return (
@@ -15,6 +18,7 @@ const Navigationbar: React.FC<NavigationBarProps> = ({ handleSearch }) => {
         <form action="" className="search-iput-container">
           <input
             type="text"
+            value={value}
             onChange={handleSearch}
             placeholder="Search"
             className="search-product"

@@ -205,6 +205,8 @@ const Home: React.FC = () => {
         </div>
         <div className="card-container">
           {Products.map((product) => (
+            // mapping through the products
+            // still have to work on add responsive carousel
             <ProductCard
               key={product.id}
               data={product}
