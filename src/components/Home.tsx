@@ -200,7 +200,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="cols">
-          <h3 className="free-delivery-1">Featured Product</h3>
+          <h3 className="free-delivery-1">Featured Products</h3>
           <p className="free-delivery-1">"Top Picks of the Month"</p>
         </div>
         <div className="card-container">
