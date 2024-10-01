@@ -13,7 +13,7 @@ function App() {
       path: "/cartpage",
       element: <ProductCart />,
       errorElement:
-        "Get your ass back, how tf did you even get here in the first place, hhuhh",
+        "ERROR 404 PAGE NOT FOUND",
     },
   ]);
   return (

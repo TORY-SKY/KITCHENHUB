@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const ProductCart = () => {
   const { state, dispatch } = useProducts();
-  const [searchTerm, setSearchTerm] = useState<string> ("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
   // Search function
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);

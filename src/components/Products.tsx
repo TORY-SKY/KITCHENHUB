@@ -11,7 +11,7 @@ import img12 from "../assets/products/img12.jpg";
 import img13 from "../assets/products/img13.jpg";
 import img14 from "../assets/products/img14.jpg";
 import img15 from "../assets/products/Elegant Kitchen Countertop with Apples.jpg";
-
+// simulating api call
 const Products = [
   { id: 1, name: "Pressure Cooker", price: 135.0, image: img2 },
   { id: 2, name: "Juice Maker", price: 145.0, image: img3 },
@@ -27,9 +27,9 @@ const Products = [
   { id: 14, name: "Microwave", price: 135.0, image: img14 },
   {
     id: 15,
-    name: "Elegant Kitchen Countertop with Apples",
+    name: "Elegant Kitchen Countertop",
     price: 500.0,
-    image: img15,
+    image: img14,
   },
 ];
 export default Products;

@@ -31,6 +31,7 @@ export const initialState: State = {
 };
 
 const ProductsContext = createContext<{
+  // typescript
   state: State;
   dispatch: React.Dispatch<Action>;
 }>({
@@ -38,6 +39,7 @@ const ProductsContext = createContext<{
   dispatch: () => undefined,
 });
 
+// Reducer function for the contextAPI
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "ADD_TO_CART": {
