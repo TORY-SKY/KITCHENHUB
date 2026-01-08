@@ -1,6 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./components/Home";
-import ProductCart from "./components/ProductCart";
+import Home from "./pages/Home"
 
 function App() {
   const router = createBrowserRouter([
@@ -11,7 +10,7 @@ function App() {
     },
     {
       path: "/cartpage",
-      element: <ProductCart />,
+      element: "<ProductCart />",
       errorElement:
         "ERROR 404 PAGE NOT FOUND",
     },
